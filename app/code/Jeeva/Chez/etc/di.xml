@@ -1,0 +1,16 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="creation_ui" xsi:type="string">Jeeva\Chez\Model\ResourceModel\Create\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Jeeva\Chez\Model\ResourceModel\Create\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">customer_information_table</argument>
+            <argument name="resourceModel" xsi:type="string">Jeeva\Chez\Model\ResourceModel\Create</argument>
+        </arguments>
+    </virtualType>
+</config>
+

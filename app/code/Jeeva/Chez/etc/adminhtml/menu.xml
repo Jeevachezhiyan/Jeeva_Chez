@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="Jeeva_Chez::parent" title="My Custom Form" module="Jeeva_Chez" sortOrder="100" resource="Jeeva_Chez::parent"/>
+        <add id="Jeeva_Chez::index" title="User List" module="Jeeva_Chez" sortOrder="10" action="creation/index" resource="Jeeva_Chez::index" parent="Jeeva_Chez::parent"/>
+    </menu>
+</config>

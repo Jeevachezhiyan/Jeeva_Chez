@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+		<payment>
+			<smoovpay>
+				<active>1</active>
+				<model>Jed\Smoovpay\Model\Payment\Smoovpay</model>
+				<order_status>pending</order_status>
+				<title>Smoovpay</title>
+				<allowspecific>0</allowspecific>
+				<group>Offline</group>
+			</smoovpay>
+		</payment>
+	</default>
+</config>

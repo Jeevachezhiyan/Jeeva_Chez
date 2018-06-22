@@ -1,0 +1,38 @@
+<form action="https://sandbox.smoovpay.com/access" id="smoovpay_checkout" method="post">
+<input type="hidden" name="action" value="pay" />
+<input type="hidden" name="currency" value="<?php echo $this->getOrderdetails('order_currency_code');?>" />
+<input type="hidden" name="version" value="2.0" />
+<?php 
+$i=1;
+foreach($this->getAllItems() as $item){
+	if(empty($item['description']))
+	{
+       $item['description'] = 'Good Product';
+	}
+	?>
+	<input type="hidden" name="item_name_<?php echo $i ?>" value="<?php echo $item['name'] ?>" />
+	<input type="hidden" name="item_description_<?php echo $i ?>" value="<?php echo $item['description'] ?>" />
+	<input type="hidden" name="item_quantity_<?php echo $i ?>" value="<?php echo round($item['quantity']) ?>" />
+	<input type="hidden" name="item_amount_<?php echo $i ?>" value="<?php echo $item['price'] ?>" /> 
+	<?php $i++;
+}?>
+<input type="hidden" name="merchant" value="<?php echo $this->getMerchant();?>" />
+<input type="hidden" name="ref_id" value="<?php echo $this->getOrderdetails('increment_id');?>" />
+<input type="hidden" name="delivery_charge" value="<?php echo $this->getOrderdetails('shipping_amount');?>" />
+<input type="hidden" name="tax_amount" value="<?php echo $this->getOrderdetails('tax_amount');?>" />
+<!-- <input type="hidden" name="tax_percentage" value="0.00" /> -->
+<input type="hidden" name="total_amount" value="<?php echo $this->getOrderdetails('grand_total');?>" />
+<input type="hidden" name="str_url" value="" />
+<input type="hidden" name="success_url" value="http://27.250.42.68/polymerscrew/smoovpay/index/response" />
+<input type="hidden" name="cancel_url" value="http://27.250.42.68/polymerscrew/checkout/cart" />
+<input type="hidden" name="signature" value="<?php echo $this->getSignatureHash();?>"/>
+<input type="hidden" name="signature_algorithm" value="sha1" />
+<h3>Please wait we are redirecting to Smoovpay.....</h3>
+<!-- <input type="submit" name="submit v2" alt="SmoovPay!" />
+ --></form>
+<script type="text/javascript">
+//<![CDATA[
+    var paymentform = document.getElementById('smoovpay_checkout');
+    window.onload = paymentform.submit();
+//]]>
+</script>

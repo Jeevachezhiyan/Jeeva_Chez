@@ -1,0 +1,29 @@
+input[name="shipping_arrival_date"] ,input[name="shippingAddress[shipping_arrival_date]"]{
+	margin: 10px 10px 10px 0;
+    max-width: 255px;
+    text-align:center;
+}
+div[name="shippingAddress.shipping_arrival_date"], div[name="shippingAddress.delivery_time_slot"], select[name="delivery_time_slot"], textarea[name="shipping_arrival_comments"]{margin-top:10px;}
+div[name="shippingAddress.delivery_time_slot"], div[name="shippingAddress.shipping_arrival_comments"], select[name="shippingAddress[delivery_time_slot]"], textarea[name="shippingAddress[shipping_arrival_comments]"]{max-width:500px;margin: 10px 0 10px 0;}
+
+div[name="shippingAddress.shipping_arrival_comments"]{
+
+ 
+   bottom: -156px;
+width: 100%;
+position: absolute;
+
+}
+
+
+div[name="shippingAddress.shipping_arrival_date"]{
+
+}
+
+.actions-toolbar.shipnext {
+    left: 432px;
+position: absolute;
+bottom: -220px;
+padding-bottom: 25px;
+}
+

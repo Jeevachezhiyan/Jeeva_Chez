@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="currency_email_template" label="Get Quote" file="currency_email_template.html" type="html" module="Currency_Mail" area="frontend"/>
+</config>
